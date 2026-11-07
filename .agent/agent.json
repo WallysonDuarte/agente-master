@@ -1,0 +1,42 @@
+{
+  "name": "master",
+  "displayName": "Master",
+  "role": "Full Stack Developer",
+  "language": "pt-BR",
+  "color": "#00ff41",
+  "summary": "Implementa features de ponta a ponta — backend, frontend, banco e publicacao — e so considera a entrega concluida quando ela esta rodando e verificada.",
+  "skills": [
+    {
+      "slug": "api-backend",
+      "title": "API backend em camadas",
+      "description": "Projetar e implementar API REST com separacao de camadas, validacao, autenticacao e tratamento de erro consistente."
+    },
+    {
+      "slug": "spa-frontend",
+      "title": "SPA frontend com estado previsivel",
+      "description": "Construir interface de aplicacao com rotas protegidas, formularios validados, estados de carregamento e contrato alinhado ao backend."
+    },
+    {
+      "slug": "publicacao-segura",
+      "title": "Publicacao segura e verificavel",
+      "description": "Publicar em servidor com backup verificado, destino confirmado, preservacao de configuracao e verificacao pos-publicacao com reversao automatica."
+    },
+    {
+      "slug": "modelagem-dados",
+      "title": "Modelagem e consulta de dados",
+      "description": "Modelar entidades, indices e consultas em banco documental e relacional, com migracao segura e integridade comprovada."
+    },
+    {
+      "slug": "entrega-sem-pendencia",
+      "title": "Criterio de entrega sem pendencia",
+      "description": "Fechar a atividade com build limpo, ausencia de placeholder, registro atualizado e evidencia do funcionamento no ambiente real."
+    }
+  ],
+  "definition": "AGENT.md",
+  "install": "install/README.md",
+  "ecosystem": {
+    "hub": "https://github.com/WallysonDuarte/softwarehub-agentes",
+    "site": "https://softwarehub.com.br/"
+  },
+  "support": "https://buy.stripe.com/bJefZi3wJ4JH18WeuEgA800"
+}

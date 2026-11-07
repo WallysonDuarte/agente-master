@@ -76,10 +76,10 @@ agente-master/
 ├── AGENT.md                 definicao canonica do agente
 ├── .agent/agent.json        metadados legiveis por maquina
 ├── skills/
-│   └── api-backend/SKILL.md
-│   └── spa-frontend/SKILL.md
-│   └── publicacao-segura/SKILL.md
-│   └── modelagem-dados/SKILL.md
+│   ├── api-backend/SKILL.md
+│   ├── spa-frontend/SKILL.md
+│   ├── publicacao-segura/SKILL.md
+│   ├── modelagem-dados/SKILL.md
 │   └── entrega-sem-pendencia/SKILL.md
 ├── install/README.md        instalacao nas 8 CLIs
 └── assets/portrait.png

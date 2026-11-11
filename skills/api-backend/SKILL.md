@@ -88,8 +88,9 @@ devolve o item, ele fica invisivel para sempre — e o efeito e cumulativo.
 
 - `catch` vazio ou que apenas registra e segue, escondendo a causa real.
 - Data e hora do momento local em vez de tempo universal para dado persistido.
-- Campo nulavel de subdocumento que o codigo legado grava como lista vazia: o desserializador
-  estrito quebra. Registre um conversor tolerante quando o historico do banco exigir.
+- Campo cujo formato mudou ao longo do tempo (objeto em registros novos, lista em registros
+  antigos): o desserializador estrito quebra. Registre um conversor tolerante quando o historico
+  do banco exigir.
 - Endpoint "interno" protegido apenas por checagem de origem local — atras de um proxy reverso,
   o proxio tambem e local. Recuse requisicoes que tragam cabecalho de encaminhamento.
 

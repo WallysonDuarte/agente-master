@@ -36,11 +36,11 @@ administrativo, API e processos em segundo plano nunca compartilham destino.
 
 Pontos onde a publicacao costuma destruir o ambiente:
 
-- **Backup encadeado com `;` em vez de `&&`.** Se a copia falha por permissao, o roteiro continua
-  e apaga o destino sem copia de volta. Use `&&` ou interrupcao imediata em erro, e aborte quando
-  o backup nao existir.
-- **Limpeza com caminho vindo de variavel.** Variavel vazia transforma a limpeza em "apague o
-  diretorio atual". Sempre valide que a variavel nao esta vazia e que o diretorio existe antes.
+- **Backup que nao interrompe o roteiro em caso de erro.** Se a copia falha, o roteiro nao pode
+  seguir para a limpeza. Encadeie os passos de modo que a falha interrompa tudo e aborte quando o
+  backup nao existir.
+- **Limpeza com caminho vindo de variavel.** Variavel vazia pode ampliar a limpeza para o diretorio
+  atual. Sempre valide que a variavel nao esta vazia e que o diretorio existe antes.
 - **Arquivos que precisam sobreviver.** Antes de limpar, leia a definicao do servico e liste todo
   arquivo de ambiente que ele carrega. Cada um precisa de exclusao explicita na limpeza. Diretorio
   de cofre, arquivo de configuracao e logs tambem.
@@ -69,9 +69,9 @@ guarda no roteiro.
 
 Resposta 200 e processo ativo **nao** provam que a versao certa subiu. Compare o hash.
 
-Servico que le segredos de um cofre externo pode demorar para responder na primeira partida: a
-verificacao precisa de novas tentativas por algumas dezenas de segundos, senao a reversao
-automatica desfaz uma publicacao correta.
+Servico com dependencias externas na partida pode demorar para responder: a verificacao precisa
+de novas tentativas por algumas dezenas de segundos, senao a reversao automatica desfaz uma
+publicacao correta.
 
 ## Limpeza
 
